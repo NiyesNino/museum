@@ -1,0 +1,38 @@
+<div class="container text-center">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titre:</strong>
+  <%= @vg.titre %>
+</p>
+
+<p>
+  <strong>Dev:</strong>
+  <%= @vg.dev %>
+</p>
+
+<p>
+  <strong>Annee:</strong>
+  <%= @vg.annee %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @vg.note %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @vg.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @vg.image %>
+</p>
+
+<%= link_to 'Edit', edit_vg_path(@vg) %> |
+<%= link_to 'Back', vgs_path %>
+
+</div>

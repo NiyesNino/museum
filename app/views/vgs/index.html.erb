@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Vgs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titre</th>
+      <th>Dev</th>
+      <th>Annee</th>
+      <th>Note</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vgs.each do |vg| %>
+      <tr>
+        <td><%= vg.titre %></td>
+        <td><%= vg.dev %></td>
+        <td><%= vg.annee %></td>
+        <td><%= vg.note %></td>
+        <td><%= vg.description %></td>
+        <td><%= vg.image %></td>
+        <td><%= link_to 'Show', vg %></td>
+        <td><%= link_to 'Edit', edit_vg_path(vg) %></td>
+        <td><%= link_to 'Destroy', vg, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vg', new_vg_path %>

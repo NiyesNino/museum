@@ -1,0 +1,47 @@
+<%= form_with(model: vg, local: true) do |form| %>
+  <% if vg.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(vg.errors.count, "error") %> prohibited this vg from being saved:</h2>
+
+      <ul>
+      <% vg.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :titre %>
+    <%= form.text_field :titre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dev %>
+    <%= form.text_field :dev %>
+  </div>
+
+  <div class="field">
+    <%= form.label :annee %>
+    <%= form.number_field :annee %>
+  </div>
+
+  <div class="field">
+    <%= form.label :note %>
+    <%= form.text_field :note %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
